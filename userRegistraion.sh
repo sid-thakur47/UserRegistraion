@@ -34,10 +34,10 @@ function verifyMobileNo() {
 			echo "Please enter valid mobile number"
 		fi
 }
-function verifyPassoword() {
+function verifyPassword() {
 
 read -p "Enter your password:" password
-	passPattern="^[A-Za-z0-9]{8,}"
+	passPattern="^(?=.*[A-Z])[a-z].{8,}$"
 			if [[ $password =~ $passPattern ]]
 		then
 			echo "Password is valid"
@@ -52,6 +52,6 @@ verifyInfo $name
 read -p "Enter last name:" lastName
 verifyInfo $lastName
 verifyEmail
-verifyPassoword
 verifyMobileNo
+verifyPassword
 
