@@ -4,7 +4,7 @@ shopt -s extglob
 
 function verifyEmail() {
 	read -p "Enter Email Address:" emailAdd
-		emailPattern="^[A-Za-z0-9]{4,}([+|_|-])?([A-Za-z0-9])?@[a-z]{5}.[a-z]{3}.([a-z]{2})?$"
+		emailPattern="^[a-zA-Z0-9]{1,}([|+|_|\-|.]?[a-zA-Z0-9]+)?[@][a-z0-9]{4,}[.][a-z]{1,5}([.][a-z]{3})?$"
 		if [[ $emailAdd =~ $emailPattern ]]
 		then
 			echo"Email is valid"
