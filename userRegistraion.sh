@@ -8,7 +8,7 @@ function verifyEmail() {
 	for (( i=1;i<=TOTAL;i++ ))
 	do
 		read -p "Enter Email Address:" emailAdd
-			emailPattern="^[a-zA-Z0-9]{1,}([|+|_|\-|.]?[a-zA-Z0-9]+)?[@][a-z0-9]{4,}[.][a-z]{1,5}([.][a-z]{3})?$"
+		emailPattern="^[a-zA-Z0-9]{1,}([|+|_|\-|.]?[a-zA-Z0-9]+)?[@][a-z0-9]{4,}[.][a-z]{1,5}([.][a-z]{3})?$"
 			if [[ $emailAdd =~ $emailPattern ]]
 			then
 				echo "Email is valid"
