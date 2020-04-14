@@ -35,9 +35,8 @@ function verifyMobileNo() {
 		fi
 }
 function verifyPassword() {
-
 read -p "Enter your password:" password
-	passPattern="^(?=.*[A-Z])[a-z].{8,}$"
+	passPattern="(?=.*[A-Z])[a-zA-Z]{8,}"
 			if [[ $password =~ $passPattern ]]
 		then
 			echo "Password is valid"
